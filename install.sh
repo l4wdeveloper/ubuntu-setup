@@ -167,9 +167,7 @@ sudo mv ./n98-magerun.phar /usr/local/bin/
 echo "suhosin.executor.include.whitelist=\"phar\"" >> /etc/php/5.6/apache2/php.ini 
 
 #PhpStorm
-wget https://download.jetbrains.com/webide/PhpStorm-2016.3.2.tar.gz
-tar xfz PhpStorm-2016.3.2.tar.gz
-rm PhpStorm-2016.3.2.tar.gz
+sudo snap install phpstorm --classic
 
 #Adminer
 sudo mkdir /home/developer/www/adminer
