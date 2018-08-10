@@ -208,6 +208,59 @@ sudo apt-get -y install gimp
 #pip
 sudo apt-get -y install python-pip
 
+#autokey
+sudo apt-get -y install autokey-gtk
+mkdir ~/.config/autokey
+mkdir ~/.config/autokey/data 
+mkdir ~/.config/autokey/data/My\ Phrases
+echo "{
+    \"usageCount\": 2, 
+    \"omitTrigger\": false, 
+    \"prompt\": false, 
+    \"description\": \"Comment\", 
+    \"abbreviation\": {
+        \"wordChars\": \"[^ \\n]\", 
+        \"abbreviations\": [
+            \"*test\"
+        ], 
+        \"immediate\": false, 
+        \"ignoreCase\": false, 
+        \"backspace\": true, 
+        \"triggerInside\": false
+    }, 
+    \"hotkey\": {
+        \"hotKey\": null, 
+        \"modifiers\": []
+    }, 
+    \"modes\": [
+        1
+    ], 
+    \"showInTrayMenu\": false, 
+    \"matchCase\": false, 
+    \"filter\": {
+        \"regex\": null, 
+        \"isRecursive\": false
+    }, 
+    \"type\": \"phrase\", 
+    \"sendMode\": \"kb\"
+}" >> ~/.config/autokey/data/My\ Phrases/.Comment1.json
+
+echo "To test on: (TEST/DEV/STAGING/LIVE)
+To test on: (mobile, desktop, both)
+Link - 
+Description - *[Co zostalo zrobione/zmienione (funkcjonalnosc, nie opis kodu) i jak powinno dzialac/wygladac obecnie.]*
+
+Attachments:
+*[Zrzut ekranu/filmik (jezeli przydatny)]*
+*[Design (jezeli dotyczy taska)]*
+*[Plik z contentem do wstawienia (jezeli dotyczy taska)]*" >> ~/.config/autokey/data/My\ Phrases/Comment1.txt
+
+sudo chown -R developer ~/.config/autokey
+
+echo "[D-BUS Service] 
+Name=org.autokey.service 
+Exec=/usr/bin/autokey" | sudo tee /usr/share/dbus-1/services/org.autokey.service2
+
 #ZSH - pyta o hasło
 sudo apt -y install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
