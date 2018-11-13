@@ -142,7 +142,7 @@ sudo dpkg -i slack-desktop-2.3.4-amd64.deb
 rm slack-desktop-2.3.4-amd64.deb
 
 #fixy po instalacji slacka
-sudo apt --fix-broken install
+sudo apt -y --fix-broken install
 
 #guake terminal
 sudo apt-get -y install guake
