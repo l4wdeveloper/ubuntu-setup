@@ -58,6 +58,8 @@ Require all granted
 
 #wiki
 echo "10.1.5.135        l4w.db" | sudo tee --append /etc/hosts
+echo "10.10.1.5   backend.bitbucket.pg" | sudo tee --append /etc/hosts
+echo "10.10.1.5   bb.pg" | sudo tee --append /etc/hosts
 
 #PHP 5.6
 sudo add-apt-repository -y ppa:ondrej/php
