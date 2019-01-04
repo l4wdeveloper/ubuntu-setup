@@ -57,7 +57,7 @@ Require all granted
 </IfModule>" >> /etc/apache2/sites-enabled/000-default.conf
 
 #wiki
-echo "10.1.5.135        l4w.db" | sudo tee --append /etc/hosts
+echo "10.10.1.5        l4w.db" | sudo tee --append /etc/hosts
 echo "10.10.1.5   backend.bitbucket.pg" | sudo tee --append /etc/hosts
 echo "10.10.1.5   bb.pg" | sudo tee --append /etc/hosts
 
