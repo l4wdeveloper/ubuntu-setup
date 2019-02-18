@@ -70,6 +70,9 @@ sudo apt-get -y install libapache2-mod-php5.6 php5.6-gd php5.6-curl
 sudo apt-get -y install php5.6-cgi
 sudo apt-get -y install php5.6-soap
 
+#PHP 7.0
+sudo apt-get install php7.0 php7.0-cgi php7.0-cli php7.0-common php7.0-curl php7.0-dev php7.0-gd php7.0-json php7.0-mbstring php7.0-mcrypt php7.0-mysql php7.0-opcache php7.0-readline php7.0-soap php7.0-xml
+
 sudo update-alternatives --set php /usr/bin/php5.6
 
 #XDEBUG
