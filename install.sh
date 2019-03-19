@@ -142,9 +142,9 @@ sudo apt-get -y update
 sudo apt-get -y install google-chrome-stable
 
 #slack
-wget https://downloads.slack-edge.com/linux_releases/slack-desktop-2.3.4-amd64.deb
-sudo dpkg -i slack-desktop-2.3.4-amd64.deb
-rm slack-desktop-2.3.4-amd64.deb
+wget https://downloads.slack-edge.com/linux_releases/slack-desktop-3.3.8-amd64.deb
+sudo dpkg -i slack-desktop-3.3.8-amd64.deb
+rm slack-desktop-3.3.8-amd64.deb
 
 #fixy po instalacji slacka
 sudo apt -y --fix-broken install
